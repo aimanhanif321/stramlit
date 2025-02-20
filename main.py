@@ -25,13 +25,13 @@ def get_deezer_songs(mood):
 songs = []
 
 # Streamlit UI Setup
-st.set_page_config(page_title="Bollywood Mood Songs", page_icon="🎶", layout="wide")
+st.set_page_config(page_title=" Mood Songs", page_icon="🎶", layout="wide")
 
 # 🌟 Header Design
 st.markdown(
     """
-    <h1 style='text-align: center; color: #e91e63;'>🎵 Bollywood Mood-Based Song Finder 🎵</h1>
-    <p style='text-align: center; font-size: 18px; color: #666;'>Select your mood & enjoy top Bollywood tracks! 💃🎶</p>
+    <h1 style='text-align: center; color: #e91e63;'>🎵  Mood-Based Song Finder 🎵</h1>
+    <p style='text-align: center; font-size: 18px; color: #666;'>Select your mood & enjoy top tracks! 💃🎶</p>
     """,
     unsafe_allow_html=True
 )
@@ -40,7 +40,7 @@ st.markdown(
 mood = st.selectbox("📝 **Choose Your Mood:**", ["Happy", "Sad", "Energetic", "Relaxing"])
 
 # 🔘 Find Songs Button (Single button to avoid duplicate error)
-if st.button("🔍 Find Bollywood Songs"):
+if st.button("🔍 Find  Songs"):
     songs = get_deezer_songs(mood)
 
 #  Display songs only if list is not empty
@@ -62,7 +62,7 @@ if songs:
             
             st.markdown("<hr>", unsafe_allow_html=True)  # ✨ Separator
 else:
-    st.warning("😔 No Bollywood songs found for this mood.")
+    st.warning("😔 No songs found for this mood.")
 
 # 🎉 Footer
 st.markdown(
